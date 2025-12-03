@@ -1,0 +1,14 @@
+python3 main.py \
+--stop_gmp_epochs 240 \
+--minumum_ratio 0.2 \
+--gpm_filter_pune \
+--mest \
+--mest_dst \
+--filter_dst \
+--ws_wise \
+--layer_interval 8000 \
+--indicate_method test \
+--model vgg16snn --data cifar100 --decay-schedule cosine \
+--sparse_init fixed_ERK --update_frequency 1000 --batch-size 100 --death-rate 0.05 \
+--growth global_gradients --death global_magnitude \
+--redistribution none --epochs 300  --density 0.3  --start_layer_rate 0.5  --ws_decay stepsigmoid --score_norm zscore --sparse
